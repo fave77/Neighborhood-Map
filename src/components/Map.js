@@ -136,7 +136,7 @@ class Map extends React.Component {
 			<section className="row">
 				<header>
 					<SideNav options={{ closeOnClick: true }}
-					trigger={<i className="material-icons side-bar white-text">menu</i>}>
+					trigger={<i className="material-icons side-bar"></i>}>
 						<Listview query={this.state.query} locations={this.state.markers}
 						handleInput={this.handleInput} handleClick={this.handleClick} />
 					</SideNav>

@@ -19,6 +19,12 @@ h4 {
 	height: 92vh;
 }
 
+.material-icons {
+	width: 30px;
+	height: 30px;
+	background-image: url(https://mdbootstrap.com/img/svg/hamburger6.svg?color=000);
+}
+
 .side-bar {
 	position: absolute;
 	top: 0.5em;
