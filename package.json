@@ -1,0 +1,37 @@
+{
+  "name": "neighborhood-map",
+	"version": "1.0.0",
+	"description": "A Neighborhood Map for Siliguri",
+  "dependencies": {
+    "escape-string-regexp": "^1.0.5",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-materialize": "^2.4.7",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.0.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+	],
+	"repository": {
+    "type": "git",
+    "url": "git+https://github.com/pbiswas101/Neighborhood-Map.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pbiswas101/Neighborhood-Map/issues"
+  },
+  "author": "Priyabrata Biswas",
+  "license": "MIT"
+}

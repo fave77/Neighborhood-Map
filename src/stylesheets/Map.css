@@ -1,0 +1,41 @@
+header {
+	height: 8vh;
+	padding: 0.5em;
+	background-image: linear-gradient(90deg, #171819 0%, #373b3b 100%);
+	z-index: 10;
+}
+
+h4 {
+	margin: 0;
+	color: #ecf4f4;
+	text-align: center;
+}
+
+.row {
+	margin: 0;
+}
+
+#map {
+	height: 92vh;
+}
+
+.side-bar {
+	position: absolute;
+	top: 0.5em;
+	left: 0.5em;
+}
+
+.side-bar:hover {
+	cursor: pointer;
+}
+
+@media only screen and (min-width: 601px) {
+	header,
+	.side-bar {
+		display: none !important;
+	}
+
+	#map {
+		height: 100vh;
+	}
+}

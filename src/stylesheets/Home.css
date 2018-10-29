@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Fascinate+Inline');
+
+body {
+	background: url(../images/siliguri-background.jpg) no-repeat center fixed;
+	background-size: cover;
+}
+
+h1,
+h3 {
+	user-select: none;
+	margin: 0;
+	color: #160302;
+	font-family: 'Fascinate Inline', cursive;
+	text-align: center;
+	text-shadow: 0 0 0.5em white;
+}
+
+h1 {
+	margin-top: 10%;
+}
+
+.button {
+	position: absolute;
+	bottom: 20%;
+	left: 50%;
+	transform: translateX(-50%);
+	font-family: 'Fascinate Inline', cursive;
+	font-weight: bold;
+	opacity: 0.8;
+}
+
+.button:hover,
+.button:focus {
+	box-shadow: 0 0 0.5em black;
+	opacity: 1;
+}
+
+@media only screen and (max-width: 600px) {
+	h1,
+	h3 {
+		font-size: 3em;
+	}
+}
