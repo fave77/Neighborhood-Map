@@ -1,7 +1,7 @@
 {
   "name": "neighborhood-map",
-	"version": "1.0.0",
-	"description": "A Neighborhood Map for Siliguri",
+  "version": "1.0.0",
+  "description": "A Neighborhood Map for Siliguri",
   "dependencies": {
     "escape-string-regexp": "^1.0.5",
     "react": "^16.5.2",
@@ -24,8 +24,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-	],
-	"repository": {
+  ],
+  "repository": {
     "type": "git",
     "url": "git+https://github.com/pbiswas101/Neighborhood-Map.git"
   },

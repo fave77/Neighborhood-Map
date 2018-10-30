@@ -18,7 +18,6 @@ class Map extends React.Component {
 	componentDidMount() {
 		window.loadMap = this.loadMap.bind(this);
 		this.initMap();
-		this.getVenues();
 	}
 
 	//initializes the map by injecting the relevant script into the DOM
@@ -43,6 +42,7 @@ class Map extends React.Component {
 			map: map,
 			infoWindow: infoWindow
 		});
+		this.getVenues();
 	}
 
 	//getting the list of all nearby venues from the centre of the map
