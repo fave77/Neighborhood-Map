@@ -24,7 +24,7 @@ class Map extends React.Component {
 	initMap() {
 		const root = document.getElementById('root');
 		const script = document.createElement('script');
-		script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBX9evWa0BS2B0EtIOgZz3uT6ngqcCd-QA&callback=loadMap';
+		script.src = `https://maps.googleapis.com/maps/api/js?key=${this.props.api_info.API_KEY}&callback=loadMap`;
 		script.async = true;
 		script.defer = true;
 		script.onerror = () => alert('Google Maps can\'t be loaded!');
@@ -53,14 +53,16 @@ class Map extends React.Component {
 			&ll=${api_info.CENTER.lat},${api_info.CENTER.lng}&radius=${api_info.RADIUS}
 			&intent=${api_info.INTENT}&limit=${api_info.LIMIT}`;
 		fetch(req_url)
-			.then(res => res.json())
+			.then(res => {
+				if(res.status === 200) return res.json();
+				else throw new Error(res.statusText);
+			})
 			.then(data => {
-				if(data.meta.code !== 200) alert('Venues can\'t be found!');
-				else this.setState({
+					this.setState({
 						venues: data.response.venues
 					}, this.createMarkers);
 			})
-			.catch(err => alert(`Venues can't be loaded!\nError - ${err}`));
+			.catch(() => alert(`Venues can't be loaded!`));
 	}
 
 	//creating the markers for each venue
@@ -77,9 +79,10 @@ class Map extends React.Component {
 			const req_url = `${api_info.ENDPOINT.slice(0, api_info.ENDPOINT.indexOf('search')) + venue.id}
 				?client_id=${api_info.CLIENT_ID}&client_secret=${api_info.CLIENT_SECRET}&v=${api_info.VERSION}`;
 			let contentString = '';
-			fetch(req_url)
-				.then(res => res.json())
-				.then(data => {
+			fetch(req_url).then(res => {
+					if(res.status === 200 || res.status === 429) return res.json();
+					else throw new Error(res.statusText);
+				}).then(data => {
 					if(data.meta.code === 429)
 						contentString = '<strong> Daily quota limit exceeded for Foursquare API! </strong>';
 					else {
@@ -89,8 +92,7 @@ class Map extends React.Component {
 							<p> ${venue.likes.count || 0} Likes <br /> ${venue.rating || 0} Rating <br />
 							<a href="${venue.canonicalUrl}" target="_blank"> View More on Foursquare </a> </p>`;
 					}
-				})
-				.catch(err => {
+				}).catch((err) => {
 					contentString = '<strong> Unable to view details! </strong>';
 				});
 			marker.addListener('click', function() {

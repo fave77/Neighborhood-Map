@@ -6,10 +6,11 @@ import '../stylesheets/animate.css';
 import '../stylesheets/App.css';
 
 /* Enable binding of all the components with the help of React Router
-	and holds Foursquare API user info in its internal state */
+	and holds Foursquare API user info & Google Maps API Key in its internal state */
 class App extends React.Component {
 	
 	state = {
+		API_KEY: 'AIzaSyBX9evWa0BS2B0EtIOgZz3uT6ngqcCd-QA',
 		CLIENT_ID: 'T4M3U2PKKAR0CHXIJSTEHPI3VDDYM5C1GCTNEUXD4B5NUOEP',
 		CLIENT_SECRET: 'HIKFWZOPVR1UWBZMMLQPQF40GOW3KZFRFYOIJAMMRUYUTSQN',
 		ENDPOINT: 'https://api.foursquare.com/v2/venues/search',
