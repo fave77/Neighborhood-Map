@@ -48,10 +48,7 @@ class Map extends React.Component {
 	//getting the list of all nearby venues from the centre of the map
 	getVenues() {
 		const api_info = this.props.api_info;
-		const	req_url = `${api_info.ENDPOINT}?client_id=${api_info.CLIENT_ID}
-			&client_secret=${api_info.CLIENT_SECRET}&v=${api_info.VERSION}
-			&ll=${api_info.CENTER.lat},${api_info.CENTER.lng}&radius=${api_info.RADIUS}
-			&intent=${api_info.INTENT}&limit=${api_info.LIMIT}`;
+		const req_url = `${api_info.ENDPOINT}?client_id=${api_info.CLIENT_ID}&client_secret=${api_info.CLIENT_SECRET}&v=${api_info.VERSION}&ll=${api_info.CENTER.lat},${api_info.CENTER.lng}&radius=${api_info.RADIUS}&intent=${api_info.INTENT}&limit=${api_info.LIMIT}`;
 		fetch(req_url)
 			.then(res => {
 				if(res.status === 200) return res.json();
