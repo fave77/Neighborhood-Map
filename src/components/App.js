@@ -17,8 +17,8 @@ class App extends React.Component {
 		VERSION: '20181019',
 		CENTER: {lat: 26.71004, lng: 88.42851},
 		RADIUS: 10000,
-		INTENT: 'browse',
-		LIMIT: 15
+		INTENT: 'checkin',
+		LIMIT: 30
 	}
 
 	render() {
