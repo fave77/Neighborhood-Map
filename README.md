@@ -11,7 +11,7 @@ In order to run this application on your local machine, you need **Node.js** and
 First, clone this repository by typing the following command on your terminal:
 
 ```
-https://github.com/pbiswas101/Neighborhood-Map
+https://github.com/fave77/Neighborhood-Map
 ```
 
 Next, navigate to the project repository viz. **Neighborhood-Map** and  type `npm install` which will install all the relevant packages for running the application successfully!
@@ -38,7 +38,7 @@ serve -h
 
 ## PREVIEW
 
-![](https://github.com/pbiswas101/Neighborhood-Map/blob/master/public/map.png)
+![](https://github.com/fave77/Neighborhood-Map/blob/master/public/map.png)
 
 ## OVERVIEW
 
@@ -58,4 +58,4 @@ The MIT License 2018 - [Priyabrata Biswas][7].
 [4]: https://reactjs.org/
 [5]: https://materializecss.com/
 [6]: https://in.udacity.com/course/front-end-web-developer-nanodegree--nd001
-[7]: http://github.com/pbiswas101
+[7]: http://github.com/fave77
